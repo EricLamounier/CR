@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets//icon.png" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Simular CR</title>
+</head>
+<body class="bg-gray-900 p-4 text-white">
+    <div class="w-full flex flex-col gap-2 my-table">
+        <div class="flex gap-1 my-table-row">
+            <div class="size-10 grow-3 ">
+                <input 
+                    type="text"
+                    placeholder="Disciplina" 
+                    class="w-full bg-gray-800 p-2 rounded-sm drop-shadow-lg focus:outline-2 focus:outline-purple-300 border-0"/>
+            </div>
+            <div class="size-10 grow-1 ">
+                <input 
+                    type="number"
+                    placeholder="Créditos" 
+                    class="w-full bg-gray-800 p-2 rounded-sm drop-shadow-lg focus:outline-2 focus:outline-purple-300 border-0"/>
+            </div>
+            <div class="size-10 grow-1 ">
+                <input 
+                    type="number"
+                    placeholder="NF" 
+                    class="w-full bg-gray-800 p-2 rounded-sm drop-shadow-lg focus:outline-2 focus:outline-purple-300 border-0"/>
+            </div>
+            <div class="size-10 w-10 grow-0 ">
+                <button 
+                    type="button"
+                    class="p-2 w-full h-full bg-gray-800 p-2 rounded-sm drop-shadow-lg active:bg-gray-900"
+                >
+                    <!--<svg class="w-full h-full" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M8.36052 0.72921C8.55578 0.533948 8.87236 0.533948 9.06763 0.72921L14.2708 5.93235C14.466 6.12761 14.466 6.4442 14.2708 6.63946L8.95513 11.9551L7.3466 13.5636C6.76081 14.1494 5.81106 14.1494 5.22528 13.5636L1.43635 9.7747C0.850563 9.18891 0.850563 8.23917 1.43635 7.65338L3.04488 6.04485L8.36052 0.72921ZM8.71407 1.78987L4.10554 6.3984L8.60157 10.8944L13.2101 6.28591L8.71407 1.78987ZM7.89447 11.6015L3.39843 7.10551L2.14346 8.36049C1.94819 8.55575 1.94819 8.87233 2.14346 9.06759L5.93238 12.8565C6.12765 13.0518 6.44423 13.0518 6.63949 12.8565L7.89447 11.6015Z"
+                          class="fill-gray-200 dark:fill-purple-200"
+                        />
+                      </svg>-->
+                      <svg  class="p-1/ w-full h-full" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M1.20308 1.04312C1.00481 0.954998 0.772341 1.0048 0.627577 1.16641C0.482813 1.32802 0.458794 1.56455 0.568117 1.75196L3.92115 7.50002L0.568117 13.2481C0.458794 13.4355 0.482813 13.672 0.627577 13.8336C0.772341 13.9952 1.00481 14.045 1.20308 13.9569L14.7031 7.95693C14.8836 7.87668 15 7.69762 15 7.50002C15 7.30243 14.8836 7.12337 14.7031 7.04312L1.20308 1.04312ZM4.84553 7.10002L2.21234 2.586L13.2689 7.50002L2.21234 12.414L4.84552 7.90002H9C9.22092 7.90002 9.4 7.72094 9.4 7.50002C9.4 7.27911 9.22092 7.10002 9 7.10002H4.84553Z"
+                          class="fill-gray-200 dark:fill-purple-200"
+                        />
+                      </svg>
+                                      
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
