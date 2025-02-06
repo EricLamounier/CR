@@ -60,11 +60,9 @@ const InfoDialog = ({aprovacoes, reprovacoes, cr} : InfoDialogType) => {
 
               <DialogPrimitive.Description asChild className="mt-2 text-sm font-normal text-gray-700 dark:text-gray-400">
                 <div>
-                    <p>
-                    O cálculo do coeficiente de rendimento do período é realizado da seguinte forma:
-                    </p>
+                    <p>O cálculo do coeficiente de rendimento do período é realizado da seguinte forma:</p>
                     <p className="text-center">Resultado &#61; &sum;(NF &times; Créditos) &frasl; &sum;(Créditos)</p>
-                    <ul className="mt-8 list-disc pl-5">
+                    <ul className="mt-4 list-disc pl-5">
                         <li>
                             Caso o resultado seja <span className="font-black text-lg">&ge;</span> 60, seu coeficiente ficará <span className='bg-blue-300 px-1 dark:text-gray-800'>Azul</span>.
                         </li>
