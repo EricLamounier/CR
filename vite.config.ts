@@ -1,7 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { VitePWA } from "vite-plugin-pwa";
-import { defineConfig } from "vite";
 
 export default defineConfig({
   plugins: [
@@ -19,7 +18,7 @@ export default defineConfig({
       manifest: {
         theme_color: "#03090E",
         background_color: "#03090E",
-        display: "standalone",
+        display: "fullscreen",
         scope: "/",
         start_url: "/",
         short_name: "CR",
