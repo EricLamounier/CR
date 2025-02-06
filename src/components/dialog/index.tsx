@@ -6,7 +6,12 @@ import { Cross1Icon, InfoCircledIcon } from "@radix-ui/react-icons";
 import { clsx } from "clsx";
 import { useState } from "react";
 
-const InfoDialog = () => {
+type InfoDialogType = {
+  aprovacoes: number;
+  reprovacoes: number;
+  cr: string;
+}
+const InfoDialog = ({aprovacoes, reprovacoes, cr} : InfoDialogType) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -56,30 +61,45 @@ const InfoDialog = () => {
               <DialogPrimitive.Description asChild className="mt-2 text-sm font-normal text-gray-700 dark:text-gray-400">
                 <div>
                     <p>
-                    O cálculo do coeficiente de rendimento do período, é realizado da seguinte forma:
+                    O cálculo do coeficiente de rendimento do período é realizado da seguinte forma:
                     </p>
-                    <p className="text-center">
-                    Resultado &#61; &sum;(NF &times; Créditos) &frasl; &sum;(Créditos)
-                    </p>
+                    <p className="text-center">Resultado &#61; &sum;(NF &times; Créditos) &frasl; &sum;(Créditos)</p>
                     <ul className="mt-8 list-disc pl-5">
                         <li>
-                            Caso o resultado seja <span className="font-black text-lg">&ge;</span> 60, seu coeficiente ficará <span>Azul.</span>
+                            Caso o resultado seja <span className="font-black text-lg">&ge;</span> 60, seu coeficiente ficará <span className='bg-blue-300 px-1 dark:text-gray-800'>Azul</span>.
                         </li>
                         <li>
-                            Caso o resultado seja <span className="font-black text-lg">&lt;</span> 60:
-                            <ul className="mt-2 list-disc pl-5">
+                            <p>Caso o resultado seja <span className="font-black text-lg">&lt;</span> 60:</p>
+                            <ul className="list-disc pl-5">
                                 <li>
-                                    Se o número de disciplinas aprovadas for <span className="font-black text-lg">&gt;</span> que o número de disciplinas reprovadas, seu coeficiente ficará <span className="font-black">Amarelo.</span>
+                                    Se o número de disciplinas aprovadas for <span className="font-black text-lg">&gt;</span> que o número de disciplinas reprovadas, seu coeficiente ficará <span className="bg-yellow-200 px-1 dark:text-gray-800">Amarelo</span>.
                                 </li>
                                 <li>
-                                    Se o número de disciplinas aprovadas for <span className="font-black text-lg">&le;</span> que o número de disciplinas reprovadas, seu coeficiente ficará <span className="font-black">Insuficiente</span> e <span className="font-black">Vermelho.</span>
+                                    Se o número de disciplinas aprovadas for <span className=" text-lg">&le;</span> que o número de disciplinas reprovadas, seu coeficiente ficará <span className="font-medium underline">Insuficiente</span> e <span className="bg-red-300 px-1 dark:text-gray-800">Vermelho</span>.
                                 </li>
                             </ul>
                         </li>
+                        <li className='mt-1'>Lembrando que o cálculo do coeficiente não arredonda nenhum valor.</li>
                     </ul>
                     <p className='pt-4'>
                         Fonte: <a className='text-sky-400 underline' target='_blank' href="https://www.pre.ufv.br/regime-didatico/?chapters=avaliacoes-do-rendimento#coeficiente-de-rendimento">Regime Didático UFV</a>
                     </p>
+                    <div className="h-[1px] my-4 w-full bg-zinc-500" />
+                    <div>
+                      {
+                        (()=>{
+                          if(Number(cr) >= 60){
+                            return <p>Como seu resultado final do CR foi <span className="font-black text-lg">&ge;</span> 60, sua situação ficará <span className="font-medium underline">satisfatória</span> e seu coeficiente ficará <span className="bg-blue-300 px-1 dark:text-gray-800">Azul</span>.</p>
+                          }else{
+                            if(aprovacoes > reprovacoes){
+                              return <p>Como seu resultado do CR foi <span className="font-black text-lg">&lt;</span> 60 e você passou na maioria das matérias, sua situação ficará <span className="font-medium underline">em atenção</span> e seu coeficiente ficará <span className="bg-yellow-200 px-1 dark:text-gray-800">Amarelo</span>.</p>
+                            }else{
+                              return <p>Como seu resultado do CR foi <span className="font-black text-lg">&lt;</span> 60 e você reprovou na maioria das matérias, sua situação ficará <span className="font-medium underline">insucifiente</span> e seu coeficiente ficará <span className="bg-red-300 px-1 dark:text-gray-800">Vermelho</span>.</p>
+                            }
+                          }
+                        })()
+                      }
+                    </div>
                 </div>
                 </DialogPrimitive.Description>
     
