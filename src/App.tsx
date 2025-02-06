@@ -8,6 +8,7 @@ import InfoDialog from "./components/dialog";
 import logoUFVWhite from './assets/ufvcrpwhite.png'
 import Row from "./components/row";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import { RowType } from "./components/utils";
 
 dayjs.extend(customParseFormat);
 dayjs.locale("pt-br");

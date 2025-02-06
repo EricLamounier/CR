@@ -1,6 +1,7 @@
 import { CheckIcon, MinusIcon, PaperPlaneIcon } from "@radix-ui/react-icons";
 import { useRef, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import { RowProps } from "../utils";
 
 const Row = ({ row, type, handleRows }: RowProps) => {
     const [disciplina, setDisciplina] = useState(row?.disciplina || "");
