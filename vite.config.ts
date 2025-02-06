@@ -18,7 +18,7 @@ export default defineConfig({
       manifest: {
         theme_color: "#03090E",
         background_color: "#03090E",
-        display: "fullscreen",
+        display: "standalone",
         scope: "/",
         start_url: "/",
         short_name: "CR",
