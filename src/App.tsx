@@ -7,7 +7,7 @@ import InfoDialog from "./components/dialog";
 
 import logoUFVWhite from './assets/ufvcrpwhite.png'
 import Row from "./components/row";
-import { EraserIcon, GitHubLogoIcon, InfoCircledIcon } from "@radix-ui/react-icons";
+import { EraserIcon, GitHubLogoIcon, InfoCircledIcon, QuestionMarkCircledIcon } from "@radix-ui/react-icons";
 import { RowType } from "./components/utils";
 import Alert from "./components/alert";
 import InfoDialog20 from "./components/dialog2.0";
@@ -116,7 +116,7 @@ function App() {
               </p>
               {/*<InfoDialog aprovacoes={aprovacoes} reprovacoes={reprovacoes} cr={totalCR}/>*/}
               <InfoDialog20 aprovacoes={aprovacoes} reprovacoes={reprovacoes} cr={totalCR} open={openInfoModal} setIsOpen={setOpenInfoModal}/>
-              <button onClick={()=>setOpenInfoModal(true)}><InfoCircledIcon className="h-6 w-6 p-1/2" /></button>
+              <button onClick={()=>setOpenInfoModal(true)}><QuestionMarkCircledIcon className="h-6 w-6 p-1/2" /></button>
             </div>
             <button onClick={()=>setOpenAlertModal(true)} className="h-ful bg-purple-600 size-8 p-1 rounded-sm placeholder:text-sm active:bg-gray-900">
               <EraserIcon className="w-full h-full text-white"/>
@@ -141,9 +141,9 @@ function App() {
           </div>
         </div>
       </div>
-      <a className="w-full mt-5 flex items-center justify-center gap-2 text-sm" href="https://github.com/EricLamounier" target="_blank">
+      <a className="w-full mt-5 flex items-center justify-center gap-2 text-sm" href="https://github.com/EricLamounier/CR" target="_blank">
         <GitHubLogoIcon />
-        <p>&lt;/&gt; Eric Lamounier</p>
+        <p>&lt;/&gt;</p>
       </a>
       <Alert open={openAlertModal} setAlertChoice={setAlertChoice} setIsOpen={setOpenAlertModal} />
     </div>
