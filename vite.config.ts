@@ -21,7 +21,7 @@ export default defineConfig({
         display: "standalone",
         scope: "/",
         start_url: "/",
-        short_name: "CR",
+        short_name: "Simular CR",
         description:
           "Simular Cálculo do Coeficiente de Rendimento da Universidade Federal de Viçosa",
         name: "Simular CR",
