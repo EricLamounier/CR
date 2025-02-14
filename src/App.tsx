@@ -141,10 +141,10 @@ function App() {
           </div>
         </div>
       </div>
-      <a className="w-full mt-5 flex items-center justify-center gap-2 text-sm" href="https://github.com/EricLamounier/CR" target="_blank">
+      {/*<a className="w-full mt-5 flex items-center justify-center gap-2 text-sm" href="https://github.com/EricLamounier/CR" target="_blank">
         <GitHubLogoIcon />
         <p>&lt;/&gt;</p>
-      </a>
+      </a>*/}
       <Alert open={openAlertModal} setAlertChoice={setAlertChoice} setIsOpen={setOpenAlertModal} />
     </div>
   );
