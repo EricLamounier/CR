@@ -85,7 +85,7 @@ const Row = ({ row, type, handleRows }: RowProps) => {
         <div className="size-10 grow-1 ">
           <input
             type="number"
-            placeholder="NF"
+            placeholder="Nota"
             value={nf}
             onChange={handleChange(setNF)}
             className="w-full h-full bg-zinc-100 dark:bg-gray-800 border-1 border-zinc-500 p-2 rounded-sm placeholder:text-sm focus:outline-2 focus:outline-purple-300"
