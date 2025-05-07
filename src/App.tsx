@@ -48,6 +48,7 @@ function App() {
     }
 
     const CR = (nf / (creditos <= 0 ? 1 : creditos));
+    console.log(CR)
 
     if (Number(CR) >= 60) { // Azul
       setSituacao(0);
@@ -100,8 +101,8 @@ function App() {
   };
 
   return (
-    <div className="flex flex-col gap-4 text-zinc-800 w-full h-full p-2 dark:text-white">
-      <div className="my-main flex flex-col gap-4 h-full">
+    <div className="flex justify-center gap-4 text-zinc-800 w-full h-full p-2 dark:text-white">
+      <div className="my-main flex flex-col gap-4 h-full max-w-120 shadow-lg p-2 border border-gray-300 rounded">
         <HeaderTable />
         <div className="flex flex-col gap-1 my-filter">
           <div className="flex justify-between items-end">
