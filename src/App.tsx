@@ -102,7 +102,7 @@ function App() {
 
   return (
     <div className="flex justify-center gap-4 text-zinc-800 w-full h-full p-2 dark:text-white">
-      <div className="my-main flex flex-col gap-4 h-full max-w-120 shadow-lg p-2 border border-gray-300 rounded">
+      <div className="my-main flex flex-col gap-4 h-full max-w-120 shadow-lg md:p-2 md:border border-gray-300 rounded">
         <HeaderTable />
         <div className="flex flex-col gap-1 my-filter">
           <div className="flex justify-between items-end">
@@ -153,7 +153,7 @@ function App() {
 
 const HeaderTable = () => (
   <div className="flex justify-between items-center gap-2 h-20 drop-shadow-sm bg-purple-600 rounded p-3 text-center text-white text-lg my-table-header">
-    <p className="text-start text-md">Simule aqui seu coeficiente de rendimento do período ☺️</p>
+    <p className="text-start text-md">Simule aqui seu coeficiente de rendimento ☺️</p>
     <img className="h-full" src={logoUFVWhite} alt="Logo UFV" />
   </div>
 );
