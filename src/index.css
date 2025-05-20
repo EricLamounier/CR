@@ -33,7 +33,6 @@ p {
 
 .shakeMe {
   display: inline-block;
-  color: white;
   font-weight: bold;
   animation: shake 1.5s infinite ease-in-out;
   transform-origin: center;
