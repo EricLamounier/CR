@@ -30,3 +30,26 @@ code {
 p {
   margin: 0;
 }
+
+.shakeMe {
+  display: inline-block;
+  color: white;
+  font-weight: bold;
+  animation: shake 1.5s infinite ease-in-out;
+  transform-origin: center;
+}
+
+@keyframes shake {
+  0%   { transform: rotate(0deg) scale(1); }
+  5%   { transform: rotate(-12deg) scale(1.1); }
+  10%  { transform: rotate(12deg) scale(1.08); }
+  15%  { transform: rotate(-12deg) scale(1.1); }
+  20%  { transform: rotate(12deg) scale(1.09); }
+  25%  { transform: rotate(-8deg) scale(1.05); }
+  30%  { transform: rotate(8deg) scale(1.04); }
+  35%  { transform: rotate(0deg) scale(1); }
+
+  /* pausa de 35% a 100% (equivale a ~1s parada) */
+  100% { transform: rotate(0deg) scale(1); }
+}
+

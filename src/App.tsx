@@ -117,7 +117,7 @@ function App() {
               </p>
               {/*<InfoDialog aprovacoes={aprovacoes} reprovacoes={reprovacoes} cr={totalCR}/>*/}
               <InfoDialog20 aprovacoes={aprovacoes} reprovacoes={reprovacoes} cr={totalCR} open={openInfoModal} setIsOpen={setOpenInfoModal}/>
-              <button onClick={()=>setOpenInfoModal(true)}><QuestionMarkCircledIcon className="h-6 w-6 p-1/2" /></button>
+              <button className="" onClick={()=>setOpenInfoModal(true)}><QuestionMarkCircledIcon className="shakeMe h-6 w-6 p-1/2" /></button>
             </div>
             <button onClick={()=>setOpenAlertModal(true)} className="h-ful bg-purple-600 size-8 p-1 rounded-sm placeholder:text-sm active:bg-gray-900">
               <EraserIcon className="w-full h-full text-white"/>
